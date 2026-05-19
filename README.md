@@ -186,22 +186,22 @@ Minimalist-Skincare-SQL-Analytics/
 <img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
 
 ## Top Revenue-Generating Products
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/top_revenue_products.png" alt="Image Description" width="600">
 
 ## High Sales + High Return Products
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/high_sales_high_returns.png" alt="Image Description" width="600">
 
 ## Month-over-Month Revenue Growth
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/mom_revenue_growth.png" alt="Image Description" width="600">
 
 ## Gross Margin Analysis
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/gross_margin_analysis.png" alt="Image Description" width="600">
 
 ## RFM Customer Segmentation
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/rfm_customer_segmentation.png" alt="Image Description" width="600">
 
 ## Acquisition Channel CLV
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/channel_clv_analysis.png" alt="Image Description" width="600">
 
 ---
 
