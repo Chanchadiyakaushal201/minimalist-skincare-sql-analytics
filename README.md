@@ -150,6 +150,7 @@ This project demonstrates:
 
 # Project Structure
 
+```text
 Minimalist-Skincare-SQL-Analytics/
 │
 ├── data/
@@ -175,6 +176,7 @@ Minimalist-Skincare-SQL-Analytics/
 2. Run table creation scripts
 3. Import CSV datasets
 4. Execute business queries
+```
 
 ---
 
