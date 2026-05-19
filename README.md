@@ -183,25 +183,25 @@ Minimalist-Skincare-SQL-Analytics/
 # Project Snapshots
 
 ## Database Schema
-<img src="https://github.com/Chanchadiyakaushal201/Comet-Business-Dashboard/blob/fce6458369f857fe3fc474214a90d1f1e34928b1/Images/Overview.png" alt="Image Description" width="600">
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
 
 ## Top Revenue-Generating Products
-![Top Revenue Products](images/top_revenue_products.png)
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
 
 ## High Sales + High Return Products
-![Top Revenue Products](images/top_revenue_products.png)
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
 
 ## Month-over-Month Revenue Growth
-![Top Revenue Products](images/top_revenue_products.png)
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
 
 ## Gross Margin Analysis
-![Gross Margin](images/gross_margin_analysis.png)
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
 
 ## RFM Customer Segmentation
-![RFM Analysis](images/rfm_analysis.png)
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
 
 ## Acquisition Channel CLV
-![Top Revenue Products](images/top_revenue_products.png)
+<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
 
 ---
 
