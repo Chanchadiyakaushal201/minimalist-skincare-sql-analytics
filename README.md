@@ -167,6 +167,7 @@ Minimalist-Skincare-SQL-Analytics/
 │   └── business_queries.sql
 │
 ├── images/
+```
 
 ---
 
@@ -176,7 +177,6 @@ Minimalist-Skincare-SQL-Analytics/
 2. Run table creation scripts
 3. Import CSV datasets
 4. Execute business queries
-```
 
 ---
 
