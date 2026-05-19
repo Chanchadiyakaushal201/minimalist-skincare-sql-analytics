@@ -183,7 +183,7 @@ Minimalist-Skincare-SQL-Analytics/
 # Project Snapshots
 
 ## Database Schema
-![Top Revenue Products](images/top_revenue_products.png)
+<img src="https://github.com/Chanchadiyakaushal201/Comet-Business-Dashboard/blob/fce6458369f857fe3fc474214a90d1f1e34928b1/Images/Overview.png" alt="Image Description" width="600">
 
 ## Top Revenue-Generating Products
 ![Top Revenue Products](images/top_revenue_products.png)
