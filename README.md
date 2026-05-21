@@ -205,6 +205,13 @@ Minimalist-Skincare-SQL-Analytics/
 
 ---
 
+# Dataset
+
+The synthetic D2C skincare analytics dataset used in this project is also available on Kaggle :
+https://www.kaggle.com/datasets/kaushalvyas16/d2c-skincare-e-commerce-analytics-dataset
+
+---
+
 # Disclaimer
 
 This dataset is synthetic and created for SQL portfolio. It is inspired by a D2C skincare e-commerce business model and is not official Minimalist company data.
