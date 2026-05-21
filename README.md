@@ -211,7 +211,7 @@ The synthetic D2C skincare analytics dataset used in this project is available o
 
 🔗 Kaggle Dataset:
 
-https://www.kaggle.com/datasets/your-link
+[https://www.kaggle.com/datasets/your-link](https://www.kaggle.com/datasets/kaushalvyas16/d2c-skincare-e-commerce-analytics-dataset)
 
 ---
 
