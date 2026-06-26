@@ -231,7 +231,7 @@ This dataset is synthetic and created for SQL portfolio. It is inspired by a D2C
 
 Linkedin :
 
-https://www.linkedin.com/in/kaushal-chanchadiya-57199b2a8/
+https://www.linkedin.com/in/kaushalchanchadiya162004/
 
 ---
 
