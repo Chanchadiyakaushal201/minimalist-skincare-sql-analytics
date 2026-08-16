@@ -1,237 +1,346 @@
-# Minimalist Skincare SQL Analytics Project
+<div align="center">
+
+# Minimalist Skincare SQL Analytics
+
+### PostgreSQL portfolio project for e-commerce sales, customer, product, return, and marketing analysis
+
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Analytics-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![SQL](https://img.shields.io/badge/SQL-Basic%20to%20Advanced-0A66C2)](SQL/Business_Queries.sql)
+[![pgAdmin](https://img.shields.io/badge/pgAdmin-4-336791?logo=postgresql&logoColor=white)](https://www.pgadmin.org/)
+[![Portfolio Project](https://img.shields.io/badge/Project-Data%20Analytics-2EA44F)](#skills-demonstrated)
+[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/kaushalvyas16/d2c-skincare-e-commerce-analytics-dataset)
+
+</div>
+
+---
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Business Problem](#business-problem)
+- [Project Highlights](#project-highlights)
+- [Tools and Technologies](#tools-and-technologies)
+- [Dataset and Data Model](#dataset-and-data-model)
+- [SQL Analysis](#sql-analysis)
+- [Key Business Insights](#key-business-insights)
+- [Project Structure](#project-structure)
+- [How to Run the Project](#how-to-run-the-project)
+- [Analysis Preview](#analysis-preview)
+- [Business Recommendations](#business-recommendations)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Dataset Source](#dataset-source)
+- [Disclaimer](#disclaimer)
+- [Author](#author)
+
+---
 
 ## Project Overview
 
-This project is a business-focused SQL analytics case study built using PostgreSQL for a D2C skincare brand inspired by Minimalist India.  
-The objective of this project is to analyze sales performance, customer behavior, product profitability, return patterns, customer segmentation, and marketing channel effectiveness using structured SQL queries.
+This project is a business-focused SQL analytics case study developed in **PostgreSQL** for a synthetic direct-to-consumer skincare brand inspired by Minimalist India.
 
-The project simulates real-world e-commerce business analysis and demonstrates practical SQL skills used by Data Analysts.
+It transforms six related e-commerce datasets into actionable insights about revenue, customer behavior, product performance, profitability, returns, inventory, and acquisition-channel effectiveness. The analysis progresses from basic filtering and aggregation to advanced window functions, customer segmentation, month-over-month growth, and RFM analysis.
 
----
-
-# Business Problem
-
-The brand wants to understand:
-
-- Which products generate the highest revenue
-- Which products have high return rates
-- Which acquisition channels bring valuable customers
-- Which customers are inactive or at risk
-- Which products are most profitable
-- How revenue is growing month-over-month
-- Which products perform best for different skin types
-
-This analysis helps improve:
-- Marketing strategy
-- Customer retention
-- Product performance
-- Profitability analysis
-- Inventory planning
-- Business decision-making
+> **Business goal:** turn transactional skincare data into clear recommendations for marketing, retention, product, and inventory decisions.
 
 ---
 
-# Tools Used
+## Business Problem
 
-- PostgreSQL
-- pgAdmin 4
-- SQL
-- CSV Datasets
-- GitHub
+The business needs to understand:
+
+- Which products and categories generate the most revenue?
+- Which products combine high sales volume with high return counts?
+- Which acquisition channels attract the most valuable customers?
+- Which customers are inactive, at risk, or high value?
+- Which products deliver the strongest gross margins?
+- How does revenue change month over month?
+- Which products perform best across different skin types?
+
+The resulting insights can support marketing allocation, customer retention, inventory planning, product improvement, and profitability management.
 
 ---
 
-# Dataset Overview
+## Project Highlights
 
-The project uses multiple relational tables to simulate a real e-commerce skincare business database.
+- **6 relational tables** covering customers, products, orders, order items, reviews, and returns
+- **30 business questions** organized across basic, intermediate, and advanced SQL
+- Revenue, profitability, returns, customer lifetime value, and product-preference analysis
+- Advanced SQL using CTEs, window functions, ranking, running totals, and (RFM) metrics
+- Reproducible PostgreSQL workflow with table creation, CSV import, and analysis scripts
+- Portfolio-ready visual evidence for key findings
 
-### Tables Used
+---
 
-| Table Name | Description |
+## Tools and Technologies
+
+| Tool | Purpose |
 |---|---|
-| customers | Customer information and acquisition details |
-| products | Product catalog and pricing details |
-| orders | Order-level transaction data |
-| order_items | Product-level order details |
-| reviews | Product ratings and reviews |
-| returns | Returned product information |
+| PostgreSQL | Relational database and analytical query engine |
+| SQL | Data exploration, aggregation, segmentation, and business analysis |
+| pgAdmin 4 | Database administration and query execution |
+| CSV | Source datasets |
+| GitHub | Version control and project documentation |
 
 ---
 
-# Database Schema
+## Dataset and Data Model
 
-The database follows a relational structure using primary keys and foreign keys.
+The project uses six interconnected tables that simulate a skincare e-commerce database.
 
-### Key Relationships
+| Table | Description |
+|---|---|
+| `customers` | Customer profiles, locations, skin types, and acquisition details |
+| `products` | Product catalogue, categories, prices, costs, and stock |
+| `orders` | Order-level transactions, channels, payments, and status |
+| `order_items` | Product-level quantities and selling prices within each order |
+| `reviews` | Product ratings and customer reviews |
+| `returns` | Returned items, reasons, and return details |
 
-- customers → orders
-- orders → order_items
-- products → order_items
-- products → reviews
-- order_items → returns
+### Core Relationships
 
----
+- `customers` → `orders`
+- `orders` → `order_items`
+- `products` → `order_items`
+- `products` → `reviews`
+- `order_items` → `returns`
 
-# SQL Concepts Used
+### Database Schema
 
-This project demonstrates:
-
-- Filtering & Sorting
-- Aggregate Functions
-- GROUP BY & HAVING
-- CASE Statements
-- JOINS & LEFT JOINS
-- Subqueries
-- Common Table Expressions (CTEs)
-- Window Functions
-- RANK()
-- LAG()
-- Running Totals
-- Customer Segmentation
-- RFM Analysis
-- Profitability Analysis
-- Revenue Contribution Analysis
+<p align="center">
+  <img src="Images/Database_Schema.png" alt="Relational database schema for the skincare analytics project" width="800">
+</p>
 
 ---
 
-# Business Questions Solved
+## SQL Analysis
 
-## Basic Analysis
+The complete set of queries is available in [`SQL/Business_Queries.sql`](SQL/Business_Queries.sql).
+
+### Basic Analysis
+
 1. Retrieve all serum products.
-2. Find products with stock_qty below 150.
-3. List all customers from Gujarat.
-4. Show all orders placed in October 2025.
-5. Calculate total revenue from delivered orders.
+2. Find products with stock below 150 units.
+3. List customers from Gujarat.
+4. Show orders placed in October 2025.
+5. Calculate revenue from delivered orders.
 6. Find the most expensive product by MRP.
-7. Show orders where final_amount is greater than ₹1500.
-8. List all product categories available.
-9. Find the top 5 lowest-stock products and classify inventory status.
-10. Count customers acquired from each acquisition channel.
+7. Identify orders with a final amount above ₹1,500.
+8. List all available product categories.
+9. Classify the five lowest-stock products by inventory status.
+10. Count customers by acquisition channel.
 
-## Intermediate Analysis
-11. Calculate monthly revenue trend.
-12. Find top 5 cities by delivered revenue.
-13. Calculate total quantity sold by product category.
-14. Find repeat customers who placed more than 2 delivered orders.
-15. Calculate average order value by sales_channel.
-16. Find top 10 products by revenue.
+### Intermediate Analysis
+
+11. Calculate the monthly revenue trend.
+12. Find the top five cities by delivered revenue.
+13. Calculate quantity sold by product category.
+14. Identify repeat customers with more than two delivered orders.
+15. Calculate average order value by sales channel.
+16. Find the top ten products by revenue.
 17. Calculate return rate by product category.
-18. Find products with average rating above 4.2.
-19. Show revenue contribution by payment method.
-20. Find customer acquisition month and first order month for each customer.
+18. Find products with an average rating above 4.2.
+19. Measure revenue contribution by payment method.
+20. Compare each customer's acquisition month with their first-order month.
 
-## Advanced Analysis
-21. Identify the top 3 revenue-generating products in each product category.
-22. Analyze month-over-month revenue growth trends.
-23. Segment customers into High, Medium, and Low value groups based on total spend.
-24. Find customers inactive for the last 90 days from the latest order date in the dataset.
-25. Calculate running total revenue by month.
-26. Identify products with high return count but high sales volume.
-27. Find best-selling product for each skin_type.
+### Advanced Analysis
+
+21. Rank the top three revenue-generating products within each category.
+22. Analyze month-over-month revenue growth.
+23. Segment customers into high-, medium-, and low-value groups.
+24. Identify customers inactive for 90 days relative to the latest dataset order.
+25. Calculate cumulative monthly revenue.
+26. Detect products with both high sales volume and high return counts.
+27. Find the best-selling product for each skin type.
 28. Analyze product-level gross margin and profitability.
-29. Build an RFM-style customer summary: recency, frequency, monetary value.
-30. Find which acquisition channel brings the highest average customer lifetime value.
+29. Build an RFM customer summary using recency, frequency, and monetary value.
+30. Determine which acquisition channel produces the highest average customer lifetime value.
+
+### SQL Concepts Demonstrated
+
+`JOIN` · `LEFT JOIN` · `GROUP BY` · `HAVING` · `CASE` · Subqueries · CTEs · Window Functions · `RANK()` · `LAG()` · Running Totals · RFM Analysis
 
 ---
 
-# Key Business Insights
+## Key Business Insights
 
-- Serum products dominated overall revenue performance, with Alpha Arbutin 2% Serum generating the highest revenue contribution among all products.
-- Revenue trends showed major growth spikes during August 2024, October 2024, and October 2025, indicating possible festive season or promotional campaign impact.
-- Month-over-month revenue analysis revealed strong volatility, with some months showing over 100% growth while others experienced sharp declines, highlighting seasonal purchasing behavior.
-- Body Care and Serum categories showed the highest return rates, suggesting potential product expectation gaps or quality-related concerns.
-- Lip Balm SPF 30 achieved the highest gross margin percentage (~59%), making it one of the most profitable products in the portfolio.
-- Referral acquisition channel generated the highest average customer lifetime value, indicating stronger customer quality compared to other marketing channels.
-- RFM analysis identified multiple “At Risk” customers with historically high monetary value, highlighting opportunities for retention and re-engagement campaigns.
-- Alpha Arbutin 2% Serum and Ceramide Moisturizer showed both high sales volume and elevated return counts, requiring deeper product-performance investigation.
-- Product preference analysis showed that different skin types favored different products, helping support targeted skincare recommendations and personalized marketing strategies.
+- **Serums lead revenue performance:** Alpha Arbutin 2% Serum generates the highest product-level revenue.
+- **Demand appears seasonal:** strong revenue spikes occur in August 2024, October 2024, and October 2025, potentially reflecting promotional or festive periods.
+- **Growth is volatile:** month-over-month performance includes both sharp increases and declines, indicating uneven purchasing cycles.
+- **Returns require attention:** Body Care and Serum show the highest category-level return rates.
+- **Lip Balm SPF 30 is highly profitable:** its gross margin is approximately 59%, placing it among the strongest products by margin.
+- **Referrals attract valuable customers:** the referral channel generates the highest average customer lifetime value.
+- **Retention opportunities exist:** RFM analysis identifies historically valuable customers who are now at risk.
+- **High-volume products need investigation:** Alpha Arbutin 2% Serum and Ceramide Moisturizer combine strong sales with elevated return counts.
+- **Preferences vary by skin type:** product affinity differs across customer skin types, supporting targeted recommendations and campaigns.
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```text
-Minimalist-Skincare-SQL-Analytics/
-│
-├── data/
-│   ├── customers.csv
-│   ├── products.csv
-│   ├── orders.csv
-│   ├── order_items.csv
-│   ├── reviews.csv
-│   └── returns.csv
-│
-├── sql/
-│   ├── create_tables.sql
-│   ├── import_data.sql
-│   └── business_queries.sql
-│
-├── images/
+minimalist-skincare-sql-analytics/
+├── Data/
+│   ├── Customers.csv
+│   ├── Order_Items.csv
+│   ├── Orders.csv
+│   ├── Products.csv
+│   ├── Returns.csv
+│   └── Reviews.csv
+├── Images/
+│   ├── Database_Schema.png
+│   ├── acquisition_channel_distribution.png
+│   ├── channel_clv_analysis.png
+│   ├── gross_margin_analysis.png
+│   ├── high_sales_high_returns.png
+│   ├── mom_revenue_growth.png
+│   ├── rfm_customer_segmentation.png
+│   └── top_revenue_products.png
+├── SQL/
+│   ├── Business_Queries.sql
+│   ├── Create_Tables.sql
+│   └── Import_Data.sql
+└── README.md
 ```
 
----
+### Quick Links
 
-## How to Run This Project
-
-1. Create database in PostgreSQL
-2. Run table creation scripts
-3. Import CSV datasets
-4. Execute business queries
-
----
-
-# Project Snapshots
-
-## Database Schema
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/25b819052e87d14b3f01e4cea9142dbf65c99883/Images/Database_Schema.png" alt="Image Description" width="600">
-
-## Top Revenue-Generating Products
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/top_revenue_products.png" alt="Image Description" width="600">
-
-## High Sales + High Return Products
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/high_sales_high_returns.png" alt="Image Description" width="600">
-
-## Month-over-Month Revenue Growth
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/mom_revenue_growth.png" alt="Image Description" width="600">
-
-## Gross Margin Analysis
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/gross_margin_analysis.png" alt="Image Description" width="600">
-
-## RFM Customer Segmentation
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/rfm_customer_segmentation.png" alt="Image Description" width="600">
-
-## Acquisition Channel CLV
-<img src="https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics/blob/32ee3a77b5cd41d0b273c37751072b59db293231/Images/channel_clv_analysis.png" alt="Image Description" width="600">
+- [View datasets](Data/)
+- [Create database tables](SQL/Create_Tables.sql)
+- [Import CSV data](SQL/Import_Data.sql)
+- [Explore all business queries](SQL/Business_Queries.sql)
+- [Browse analysis images](Images/)
 
 ---
 
-# Dataset
+## How to Run the Project
 
-The synthetic D2C skincare analytics dataset used in this project is available on Kaggle.
+### Prerequisites
 
-🔗 Kaggle Dataset:
+Install:
 
-https://www.kaggle.com/datasets/kaushalvyas16/d2c-skincare-e-commerce-analytics-dataset
+- [PostgreSQL](https://www.postgresql.org/download/)
+- [pgAdmin 4](https://www.pgadmin.org/download/) or another PostgreSQL client
+- Git, if you want to clone the repository locally
+
+### Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Chanchadiyakaushal201/minimalist-skincare-sql-analytics.git
+   cd minimalist-skincare-sql-analytics
+   ```
+
+2. Create a PostgreSQL database for the project.
+
+3. Open and run [`SQL/Create_Tables.sql`](SQL/Create_Tables.sql).
+
+4. Review the CSV file paths in [`SQL/Import_Data.sql`](SQL/Import_Data.sql) and update them for your local environment.
+
+5. Run [`SQL/Import_Data.sql`](SQL/Import_Data.sql) to load the six datasets.
+
+6. Execute [`SQL/Business_Queries.sql`](SQL/Business_Queries.sql) to reproduce the analysis.
+
+> **Note:** PostgreSQL `COPY` paths depend on your operating system and server configuration. Use absolute local paths and ensure the PostgreSQL service can read the dataset directory.
 
 ---
 
-# Disclaimer
+## Analysis Preview
 
-This dataset is synthetic and created for SQL portfolio. It is inspired by a D2C skincare e-commerce business model and is not official Minimalist company data.
+### Top Revenue-Generating Products
+
+<p align="center">
+  <img src="Images/top_revenue_products.png" alt="Top revenue-generating skincare products" width="760">
+</p>
+
+### High-Sales, High-Return Products
+
+<p align="center">
+  <img src="Images/high_sales_high_returns.png" alt="Products with high sales volume and high return counts" width="760">
+</p>
+
+### Month-over-Month Revenue Growth
+
+<p align="center">
+  <img src="Images/mom_revenue_growth.png" alt="Month-over-month skincare revenue growth" width="760">
+</p>
+
+### Gross Margin Analysis
+
+<p align="center">
+  <img src="Images/gross_margin_analysis.png" alt="Product-level gross margin analysis" width="760">
+</p>
+
+### RFM Customer Segmentation
+
+<p align="center">
+  <img src="Images/rfm_customer_segmentation.png" alt="RFM customer segmentation results" width="760">
+</p>
+
+### Acquisition Channel Customer Lifetime Value
+
+<p align="center">
+  <img src="Images/channel_clv_analysis.png" alt="Average customer lifetime value by acquisition channel" width="760">
+</p>
 
 ---
 
-# Author
+## Business Recommendations
 
-**Kaushal**
-
----
-
-# 🔗 Connect with Me
-
-Linkedin :
-
-https://www.linkedin.com/in/kaushalchanchadiya162004/
+1. Investigate the causes of elevated returns for high-volume Serum and Body Care products.
+2. Prioritize high-margin products such as Lip Balm SPF 30 in promotions and bundles.
+3. Increase investment in referral programs because they attract higher-value customers.
+4. Launch re-engagement campaigns for high-value customers classified as at risk.
+5. Align inventory and promotional planning with observed seasonal revenue spikes.
+6. Use skin-type preferences to support more personalized product recommendations.
 
 ---
 
+## Skills Demonstrated
+
+- Relational database design
+- PostgreSQL table creation and CSV ingestion
+- Data validation and exploratory SQL
+- Multi-table joins and aggregation
+- CTEs and nested queries
+- Window functions and ranking
+- Time-series and growth analysis
+- Product profitability and return analysis
+- Customer segmentation and RFM analysis
+- Business insight generation
+- Technical documentation and data storytelling
+
+---
+
+## Dataset Source
+
+The synthetic D2C skincare dataset is available on Kaggle:
+
+[**D2C Skincare E-commerce Analytics Dataset**](https://www.kaggle.com/datasets/kaushalvyas16/d2c-skincare-e-commerce-analytics-dataset)
+
+---
+
+## Disclaimer
+
+This project uses synthetic data created for learning and portfolio purposes. It is inspired by a D2C skincare e-commerce business model and is **not affiliated with, endorsed by, or based on official data from Minimalist**.
+
+---
+
+## Author
+
+### Kaushal Chanchadiya
+
+Aspiring Data Analyst focused on converting raw data into clear business insights through SQL, analytics, visualization, and data storytelling.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Kaushal%20Chanchadiya-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaushalchanchadiya162004/)
+[![GitHub](https://img.shields.io/badge/GitHub-Chanchadiyakaushal201-181717?logo=github&logoColor=white)](https://github.com/Chanchadiyakaushal201)
+
+---
+
+<div align="center">
+
+If this project helped you, consider giving the repository a ⭐.
+
+[Back to top](#minimalist-skincare-sql-analytics)
+
+</div>
