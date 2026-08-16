@@ -8,7 +8,7 @@
 [![SQL](https://img.shields.io/badge/SQL-Basic%20to%20Advanced-0A66C2)](SQL/Business_Queries.sql)
 [![pgAdmin](https://img.shields.io/badge/pgAdmin-4-336791?logo=postgresql&logoColor=white)](https://www.pgadmin.org/)
 [![Portfolio Project](https://img.shields.io/badge/Project-Data%20Analytics-2EA44F)](#skills-demonstrated)
-[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/kaushalvyas16/d2c-skincare-e-commerce-analytics-dataset)
+[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/kaushalvyas16/d2c-skincare-e-commerce-analytics-dataset)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
 
@@ -199,7 +199,7 @@ minimalist-skincare-sql-analytics/
 │   ├── Business_Queries.sql
 │   ├── Create_Tables.sql
 │   └── Import_Data.sql
-└── README.md
+├── LICENSE\n└── README.md
 ```
 
 ### Quick Links
@@ -317,6 +317,12 @@ Install:
 The synthetic D2C skincare dataset is available on Kaggle:
 
 [**D2C Skincare E-commerce Analytics Dataset**](https://www.kaggle.com/datasets/kaushalvyas16/d2c-skincare-e-commerce-analytics-dataset)
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
