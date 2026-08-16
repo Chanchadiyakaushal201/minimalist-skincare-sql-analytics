@@ -29,6 +29,7 @@
 - [Business Recommendations](#business-recommendations)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Dataset Source](#dataset-source)
+- [License](#license)
 - [Disclaimer](#disclaimer)
 - [Author](#author)
 
